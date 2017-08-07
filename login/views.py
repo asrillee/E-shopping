@@ -78,7 +78,7 @@ class UserLoginView(View):
                 if user.is_active:
                     login(request, user)
                     # print out their name --> request.user.username
-                    return redirect('/upload')
+                    return redirect('/home')
             else:
                 return render(request, self.template_name, {'error': 'Username and password do not match.'})
         #return HttpResponse("Hello")
