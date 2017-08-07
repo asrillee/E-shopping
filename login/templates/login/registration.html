@@ -1,0 +1,67 @@
+{% include 'login/header.html' %}
+{% load static %}
+
+<body>
+<title>Register</title>
+
+<div class="container col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4 centered">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+             <h1>Register</h1>
+        </div>
+        <div class="panel-body">
+            <form method="post" action="" enctype="multipart/form-data" id="login-form" >
+            {% csrf_token %}
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-user" style="width: auto"></i>
+                    </span>
+                    <input type="text" name="username" placeholder="Username" class="form-control" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-lock" style="width: auto"></i>
+                    </span>
+                    <input type="password" name="password" placeholder="Password" class="form-control" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">@</span>
+                    <input type="email" name="email" placeholder="Email" class="form-control" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" name="registration" class="btn btn-default" method="post" style="width:100%;text-align:center;">Register<i class="glyphicon glyphicon-log-in"></i></button>
+            <!--<input type="submit" name="login" class="login login-submit" value="login">-->
+            </div>
+            </form>
+            <div class="form-group" style="text-align:center;">
+                <a href="{% url 'login:index' %}">Login</a> <a href="">Forgot Password</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <!--<div class="login-card">-->
+    <!--<h1>Registration</h1><br>-->
+  <!--<form method="post" action="">-->
+    <!--{% csrf_token %}-->
+    <!--<input type="text" name="username" placeholder="Username">-->
+    <!--<input type="password" name="password" placeholder="Password" required>-->
+    <!--<input type="submit" name="registration" class="login login-submit" value="register">-->
+  <!--</form>-->
+
+  <!--<div class="login-help">-->
+    <!--<a href="#">Register</a> • <a href="#">Forgot Password</a>-->
+  <!--</div>-->
+<!--</div>-->
+
+<!-- <div id="error"><img src="https://dl.dropboxusercontent.com/u/23299152/Delete-icon.png" /> Your caps-lock is on.</div> -->
+
+  <!--<script src='http://codepen.io/assets/libs/fullpage/jquery_and_jqueryui.js'></script>-->
+
+</body>
