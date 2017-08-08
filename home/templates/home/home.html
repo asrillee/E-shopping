@@ -1,6 +1,8 @@
 {% include 'home/header.html' %}
-<div class="container">
-    <div id="sidebar">
+{% load static %}
+<body style="overflow:auto">
+<div class="container" >
+    <div id="sidebar" >
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Explore</a></li>
@@ -8,22 +10,67 @@
                 <li><a href="#">Sign Out</a></li>
         </ul>
     </div>
-    <div class="main-content">
+    <div class="main-content" >
         <a href="#" data-toggle=".container" id="sidebar-toggle">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </a>
-        <div class="content">
-            <table style="width:100%;">
-                <tbody >
-                    <tr >
-                        <td class="col-md-6"><div style="width:100%;height:50vh;border:solid;"></div></td>
-                        <td class="col-md-6">you</td>
-                    </tr>
-                </tbody>
-            </table>
+
+        <div class="grid" style="">
+            <figure class="effect-hera">
+                <img src="{% static 'img/shopping.jpg' %}" style="">
+                <figcaption>
+                    <h2>
+                        Browse
+                        <br>
+                        <span>Shop</span>
+                    </h2>
+                    <p>
+                        <a href="#">
+                            <i class="fa fa-shopping-basket fa-3x"></i>
+                        </a>
+                    </p>
+                </figcaption>
+            </figure>
+            <figure class="effect-hera">
+                <img src="{% static 'img/highways.jpg' %}">
+                <figcaption>
+                    <h2>
+                        Track
+                        <br>
+                        <span>Delivery</span>
+                    </h2>
+                    <p>
+                        <a href="#">
+                            <i class="fa fa-paper-plane-o fa-2x"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-truck fa-2x"></i>
+                        </a>
+                    </p>
+                </figcaption>
+            </figure>
         </div>
-    </div>
+
+        <script type="text/javascript">
+            $('.effect-hera').on("mouseover", function(){
+                $(this).children('img').css('opacity', '-=0.1');
+            });
+            $('.effect-hera').on("mouseout", function(){
+                $(this).children('img').css('opacity', '+=0.1');
+            });
+        </script>
+        <!--<div class="content">-->
+            <!--<table style="width:100%;">-->
+                <!--<tbody >-->
+                    <!--<tr >-->
+                        <!--<td class="col-md-6"><div style="width:100%;height:50vh;border:solid;"></div></td>-->
+                        <!--<td class="col-md-6"><div style="width:100%;height:50vh;border:solid;"></div></td>-->
+                    <!--</tr>-->
+                <!--</tbody>-->
+            <!--</table>-->
+        <!--</div>-->
     </div>
 </div>
+</body>
