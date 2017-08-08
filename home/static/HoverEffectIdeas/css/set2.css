@@ -1,6 +1,5 @@
 .grid {
 	position: relative;
-	clear: both;
 	margin: 0 auto;
 	padding: 1em 0 4em;
 	max-width: 1000px;
@@ -288,12 +287,12 @@ figure.effect-hera p a i {
 
 figure.effect-hera p a:first-child i {
 	-webkit-transform: translate3d(-60px,-60px,0);
-	transform: translate3d(-60px,-60px,0);
+	transform: translate3d(-10px,-10px,0);
 }
 
 figure.effect-hera p a:nth-child(2) i {
 	-webkit-transform: translate3d(60px,-60px,0);
-	transform: translate3d(60px,-60px,0);
+	transform: translate3d(10px,-10px,0);
 }
 
 figure.effect-hera p a:nth-child(3) i {

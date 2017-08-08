@@ -1,5 +1,6 @@
 {% include 'home/header.html' %}
 {% load static %}
+<title>Bazaar</title>
 <body style="overflow:auto">
 <div class="container" >
     <div id="sidebar" >
@@ -34,8 +35,9 @@
                 </figcaption>
             </figure>
             <figure class="effect-hera">
-                <img src="{% static 'img/highways.jpg' %}">
+                <img src="{% static 'img/highways.jpg' %}" >
                 <figcaption>
+                    <a href="{% url 'delivery:delivery' %}"></a>
                     <h2>
                         Track
                         <br>

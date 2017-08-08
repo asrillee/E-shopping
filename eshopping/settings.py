@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'compressor',
     'login.apps.LoginConfig',
     'home.apps.HomeConfig',
+    'delivery.apps.DeliveryConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
