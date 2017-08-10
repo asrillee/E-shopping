@@ -1,3 +1,6 @@
+{% include 'delivery/header.html' %}
+{% load static %}
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,24 +13,34 @@
     </style>
   </head>
   <body>
-    <h3>My Google Maps Demo</h3>
-    <div id="map"></div>
-    <script>
-      function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPpHkNfwQ28XkrciGCnDoaTAcoU7cho9I&callback=initMap">
-    </script>
+    <div id="my-page">
+      <div id="my-header"> <a href="#my-menu" class="contact"></a></div>
+      <div id="my-content">
+        <div class="background">
+          <img src="{% static 'img/mountain-6.jpg' %}"/>
+        </div>
+        <h3>My Google Maps Demo</h3>
+        <div id="map"></div>
+        <script>
+          function initMap() {
+            var uluru = {lat: 1.331508, lng: 103.869083};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 4,
+              center: uluru
+            });
+            var marker = new google.maps.Marker({
+              position: uluru,
+              map: map
+            });
+          }
 
+
+        </script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPpHkNfwQ28XkrciGCnDoaTAcoU7cho9I&callback=initMap">
+        </script>
+      </div>
+      <div id="my-footer"></div>
+   </div>
   </body>
 </html>
