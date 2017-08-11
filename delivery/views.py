@@ -6,4 +6,4 @@ from django.http import HttpResponse
 def home(request):
     # if not request.user.is_authenticated:
     #     return render(request, 'unauthorized.html')
-    return render(request, 'delivery/track.html')
+    return render(request, 'delivery/index.html')
