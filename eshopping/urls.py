@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^login/', include('login.urls')),
     url(r'^', include('home.urls')),
     url(r'^delivery/', include('delivery.urls')),
+    url(r'^shop/', include('shop.urls')),
 ]
 
 if settings.DEBUG:
