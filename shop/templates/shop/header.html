@@ -15,28 +15,29 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <script src="{% static 'slideout-1.0.1/dist/slideout.js' %}"></script>
+    <script src="{% static 'shop/slideout-1.0.1/dist/slideout.js' %}"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/1.13.0/mocha.min.css">
-    <link rel="stylesheet" href="{% static 'slideout-1.0.1/test/test.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'slideout-1.0.1/index.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'shop/slideout-1.0.1/index.css' %}"/>
 
     <!-- getbootstrap plugins -->
-    <link rel="stylesheet" href="{% static 'bootstrap-4.0.0-beta/dist/css/bootstrap.min.css' %}" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <script src="{% static 'bootstrap-4.0.0-beta/assets/js/vendor/jquery-slim.min.js' %}"></script>
-    <script src="{% static 'bootstrap-4.0.0-beta/assets/js/vendor/popper.min.js' %}" ></script>
-    <script src="{% static 'bootstrap-4.0.0-beta/dist/js/bootstrap.min.js' %}" ></script>
+    <link rel="stylesheet" href="{% static 'shop/bootstrap-4.0.0-beta/dist/css/bootstrap.min.css' %}" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="{% static 'shop/bootstrap-4.0.0-beta/assets/js/vendor/jquery-slim.min.js' %}"></script>
+    <script src="{% static 'shop/bootstrap-4.0.0-beta/assets/js/vendor/popper.min.js' %}" ></script>
+    <script src="{% static 'shop/bootstrap-4.0.0-beta/dist/js/bootstrap.min.js' %}" ></script>
 
     <nav id="menu" class="menu">
     <section class="menu-section">
-        <h3 class="menu-section-title">Docs</h3>
+        <h3 class="menu-section-title">Herbology</h3>
         <ul class="menu-section-list">
           <li><a href="{% url 'home:home' %}">Home</a></li>
           <li><a href="{% url 'shop:shop' %}">Shop</a></li>
-          <li><a href="https://github.com/mango/slideout#api">API</a></li>
+          <li><a href="{% url 'delivery:delivery' %}">Delivery</a></li>
           <li><a href="https://github.com/mango/slideout#npm-scripts" target="_blank">npm-scripts</a></li>
         </ul>
       </section>
     </nav>
+
+
 
 
 </head>

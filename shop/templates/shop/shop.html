@@ -3,18 +3,15 @@
 
 <body>
 
+    <header class="fixed-header">
+        <button class="btn-hamburger js-slideout-toggle"></button>
+    </header>
+
     <main id="panel" class="panel">
     <header class="panel-header">
-      <button class="btn-hamburger js-slideout-toggle"></button>
       <h1 class="title">Herbology</h1>
     </header>
 
-    <section class="box">
-      <h2 class="box-title">Locate Us</h2>
-      <div id="mocha" class="box-content">
-        <div id="map"></div>
-      </div>
-    </section>
 
     <footer class="panel-footer">
       <p>with <span class="heart">❤</span> by <a href="{% url 'home:home' %}">Herbology</a></p>
@@ -29,8 +26,10 @@
         if (!expr) throw new Error(msg || 'failed');
       }
   </script>
-  <script src="{% static 'slideout-1.0.1/test/test.js' %}"></script>
+  <script src="{% static 'shop/slideout-1.0.1/test/test.js' %}"></script>
   <script>
+
+
     window.onload = function() {
       document.querySelector('.js-slideout-toggle').addEventListener('click', function() {
         slideout.toggle();
@@ -42,6 +41,8 @@
 
       //var runner = mocha.run();
     };
+
+
   </script>
 
 </body>

@@ -8,10 +8,13 @@
        }
     </style>
 
+  <header class="fixed-header">
+        <button class="btn-hamburger js-slideout-toggle"></button>
+  </header>
+
   <main id="panel" class="panel">
     <header class="panel-header">
-      <button class="btn-hamburger js-slideout-toggle"></button>
-      <h1 class="title">Herbology</h1>
+      <h1 class="title">Herbology Delivery</h1>
     </header>
 
     <section class="box">
@@ -50,7 +53,7 @@
         if (!expr) throw new Error(msg || 'failed');
       }
   </script>
-  <script src="{% static 'slideout-1.0.1/test/test.js' %}"></script>
+  <script src="{% static 'delivery/slideout-1.0.1/test/test.js' %}"></script>
   <script>
     window.onload = function() {
       document.querySelector('.js-slideout-toggle').addEventListener('click', function() {

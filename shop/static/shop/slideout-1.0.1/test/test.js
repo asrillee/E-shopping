@@ -15,21 +15,35 @@ var beforecloseEvent = false;
 var closeEvent = false;
 var slideout = new Slideout({
   'panel': doc.getElementById('panel'),
-  'menu': doc.getElementById('menu')
+  'menu': doc.getElementById('menu'),
+  'padding': 256,
+  'tolerance': 70
+});
+
+var fixed = document.querySelector('.fixed-header');
+
+slideout.on('translate', function(translated) {
+  fixed.style.transform = 'translateX(' + translated + 'px)';
 });
 
 slideout
   .on('beforeopen', function() {
     beforeopenEvent = true;
+    fixed.style.transition = 'transform 300ms ease';
+    fixed.style.transform = 'translateX(256px)';
   })
   .on('open', function() {
     openEvent = true;
+    fixed.style.transition = '';
   })
   .on('beforeclose', function() {
     beforecloseEvent = true;
+    fixed.style.transition = 'transform 300ms ease';
+    fixed.style.transform = 'translateX(0px)';
   })
   .on('close', function() {
     closeEvent = true;
+    fixed.style.transition = '';
   });
 
 describe('Slideout', function () {
@@ -213,3 +227,9 @@ slideout
     this.panel.classList.remove('panel-open');
     this.panel.removeEventListener('click', close);
   });
+
+$(document).keyup(function(e) {
+  if(e.keyCode == 27){
+    slideout.close();
+  }
+});
