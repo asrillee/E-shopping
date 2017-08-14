@@ -1,6 +1,15 @@
 {% include 'shop/header.html' %}
 {% load static %}
 
+<script>
+    $(document).ready(function(){
+      $('.carousel-item').slick({
+        adaptiveHeight: true
+      });
+    });
+
+    $('.carousel-item).slick('slickAdd',"<div></div>");
+</script>
 <body>
 
     <header class="fixed-header">
@@ -12,6 +21,9 @@
       <h1 class="title">Herbology</h1>
     </header>
 
+    <div class="carousel-item">
+
+    </div>
 
     <footer class="panel-footer">
       <p>with <span class="heart">❤</span> by <a href="{% url 'home:home' %}">Herbology</a></p>
