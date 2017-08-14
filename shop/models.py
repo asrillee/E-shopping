@@ -12,7 +12,11 @@ class Inventory(models.Model):
     item_no = models.AutoField(primary_key=True)
     item_name = models.CharField(default='',max_length=1000,blank=True)
     item_category = models.CharField(default='',max_length=1000,blank=True)
-    item_image = models.ImageField(upload_to=inventory_path)
+    item_image = models.ImageField(upload_to=inventory_path,default='')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE,default='')
+
+    def __str__(self):
+        return str(self.item_no) + '. ' + self.item_name
 
 # class Cart_Item_Instance(models.Model):
 #     inventory = models.ForeignKey(Inventory)
