@@ -1,15 +1,9 @@
 {% include 'shop/header.html' %}
 {% load static %}
 
-<script>
-    $(document).ready(function(){
-      $('.carousel-item').slick({
-        adaptiveHeight: true
-      });
-    });
+<script type="text/javascript" src="{% static 'shop/shop.js' %}"></script>
 
-    $('.carousel-item).slick('slickAdd',"<div></div>");
-</script>
+<link rel="stylesheet" href="{% static 'shop/shopstyle.css' %}">
 <body>
 
     <header class="fixed-header">
@@ -21,8 +15,12 @@
       <h1 class="title">Herbology</h1>
     </header>
 
-    <div class="carousel-item">
-
+    <div class="fullwidth slick-slider js-slick">
+        <div class="carousel-item">
+            <div class="photo is-animating" style="background-image: url('/static/shop/image/cheese_1280x800.jpg')"></div>
+            <div class="photo is-animating" style="background-image: url('/static/shop/slideout-1.0.1/test/assets/burgerIcon.png')"></div>
+            <div class="photo is-animating" style="background-image: url('/static/shop/slideout-1.0.1/test/assets/menu.png')"></div>
+        </div>
     </div>
 
     <footer class="panel-footer">
@@ -39,22 +37,5 @@
       }
   </script>
   <script src="{% static 'shop/slideout-1.0.1/test/test.js' %}"></script>
-  <script>
-
-
-    window.onload = function() {
-      document.querySelector('.js-slideout-toggle').addEventListener('click', function() {
-        slideout.toggle();
-      });
-
-      document.querySelector('.menu').addEventListener('click', function(eve) {
-        if (eve.target.nodeName === 'A') { slideout.close(); }
-      });
-
-      //var runner = mocha.run();
-    };
-
-
-  </script>
 
 </body>
