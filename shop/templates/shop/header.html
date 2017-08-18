@@ -28,10 +28,11 @@
     <script src="{% static 'shop/bootstrap-4.0.0-beta/dist/js/bootstrap.min.js' %}" ></script>
 
     <!-- Slick plugin -->
-    <link rel="stylesheet" type="text/css" href="{% static 'shop/slick-1.6.0/slick/slick.css' %}"/>
+    <!--<link rel="stylesheet" type="text/css" href="{% static 'shop/slick-1.6.0/slick/slick.css' %}"/>-->
     <link rel="stylesheet" type="text/css" href="{% static 'shop/slick-1.6.0/slick/slick-theme.css' %}"/>
     <script type="text/javascript" src="{% static 'shop/jquery-1.11.0.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'shop/jquery-migrate-1.2.1.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script type="text/javascript" src="{% static 'shop/slick-1.6.0/slick/slick.min.js' %}"></script>
 
     <!-- Font Awesome -->
@@ -49,7 +50,8 @@
       </section>
     </nav>
 
-
-
+    <header class="fixed-header">
+        <button class="btn-hamburger js-slideout-toggle"></button>
+    </header>
 
 </head>

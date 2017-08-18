@@ -6,20 +6,81 @@
 <link rel="stylesheet" href="{% static 'shop/shopstyle.css' %}">
 <body>
 
-    <header class="fixed-header">
-        <button class="btn-hamburger js-slideout-toggle"></button>
-    </header>
+
 
     <main id="panel" class="panel">
+    <br>
+    <br>
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+            <div style="margin-left: auto; margin-right: auto;">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown2" aria-controls="navbarNavDropdown2" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown link
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown2">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">You <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown link
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
     <header class="panel-header">
       <h1 class="title">Herbology</h1>
     </header>
 
     <div class="fullwidth slick-slider js-slick">
-        <div class="carousel-item">
-            <div class="photo is-animating" style="background-image: url('/static/shop/image/cheese_1280x800.jpg')"></div>
-            <div class="photo is-animating" style="background-image: url('/static/shop/slideout-1.0.1/test/assets/burgerIcon.png')"></div>
-            <div class="photo is-animating" style="background-image: url('/static/shop/slideout-1.0.1/test/assets/menu.png')"></div>
+        <div class="carousel-item" data-arrows="true">
+            <!--<div class="photo is-animating" style="background-image: url('/static/shop/image/cheese_1280x800.jpg')"></div>-->
+            <!--<div class="photo" style="background-image: url('/static/shop/slideout-1.0.1/test/assets/burgerIcon.png')"></div>-->
+            <!--<div class="photo" style="background-image: url('/static/shop/slideout-1.0.1/test/assets/menu.png')"></div>-->
+            <!--<div class="photo" style="background-image: url('/static/shop/slideout-1.0.1/test/assets/menu2.png')"></div>-->
+            <div class="photo is-animating"><img data-lazy="{% static 'shop/image/cheese_1280x800.jpg' %}"/></div>
+            <div class="photo"><img data-lazy="{% static 'shop/slideout-1.0.1/test/assets/burgerIcon.png' %}"/></div>
+            <div class="photo"><img data-lazy="{% static 'shop/slideout-1.0.1/test/assets/menu.png' %}"/></div>
+            <div class="photo"><img data-lazy="{% static 'shop/slideout-1.0.1/test/assets/menu2.png' %}"/></div>
         </div>
     </div>
 

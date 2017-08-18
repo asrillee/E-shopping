@@ -1,20 +1,23 @@
-$(document).ready(function(){
+$(window).on("load", function() {
   $('.carousel-item').slick({
+    accessibility: true,
+    lazyLoad: "progressive",
     adaptiveHeight: true,
     dots: true,
     infinite: true,
     speed: 500,
-    fade: true,
-    cssEase: 'linear',
+    cssEase: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
+    slidesToShow: 2,
+    slidesToScroll: 2,
     mobileFirst: true,
     autoplay: true,
     autoplaySpeed: 5000,
-    draggable: false,
-    speed: 500,
-    arrows: true
+    arrows: true,
+    draggable: false
   });
 
-  $('.slick-slide').focus();
+
+    $('.slick-active').focus();
 
   $('.js-slick').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
     $(slick.$slides).removeClass('is-animating');
@@ -23,6 +26,8 @@ $(document).ready(function(){
   $('.js-slick').on('afterChange', function(event, slick, currentSlide, nextSlide) {
     $(slick.$slides.get(currentSlide)).addClass('is-animating');
   });
+
+
 });
 
     //$('.carousel-item').slick('slickAdd',"<div></div>");
