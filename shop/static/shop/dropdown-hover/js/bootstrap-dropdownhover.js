@@ -46,7 +46,7 @@
     window.clearTimeout(Dropdownhover.TIMEOUT)
     // Close all dropdowns
     $('.dropdown').not($this.parents()).each(function(){
-         $(this).removeClass('open');
+         $(this).removeClass('show');
      });
 
     var effect = this.options.animations[0]
@@ -54,7 +54,7 @@
     if ($this.is('.disabled, :disabled')) return
 
     var $parent  = $this.parent()
-    var isActive = $parent.hasClass('open')
+    var isActive = $parent.hasClass('show')
 
     if (!isActive) {
 
@@ -62,7 +62,7 @@
       var relatedTarget = { relatedTarget: this }
 
       $parent
-        .addClass('open')
+        .addClass('show')
 
       var side = this.position($dropdown)
       side == 'top' ? effect = this.options.animations[2] :
@@ -93,7 +93,7 @@
     var $this = $(_dropdownLink)
     var $parent  = $this.parent()
     Dropdownhover.TIMEOUT = window.setTimeout(function () {
-      $parent.removeClass('open')
+      $parent.removeClass('show')
     }, Dropdownhover.DELAY)
   }
 

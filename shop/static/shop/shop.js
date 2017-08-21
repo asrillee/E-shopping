@@ -27,6 +27,10 @@ $(window).on("load", function() {
     $(slick.$slides.get(currentSlide)).addClass('is-animating');
   });
 
+  $("#navbarDropdownMenuLink").hover(function()
+     {
+       $(this).css("cursor", "hand");
+     });
 
 });
 
