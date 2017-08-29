@@ -26,11 +26,13 @@ $(window).on("load", function() {
   $('.js-slick').on('afterChange', function(event, slick, currentSlide, nextSlide) {
     $(slick.$slides.get(currentSlide)).addClass('is-animating');
   });
-
-  $("#navbarDropdownMenuLink").hover(function()
+  if (!( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
+    $("#navbarDropdownMenuLink").hover(function()
      {
-       $(this).css("cursor", "hand");
+       $(this).css("cursor", "pointer");
      });
+  }
+
 
 });
 
